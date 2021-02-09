@@ -32,6 +32,9 @@ function getValidacion(e) {
 	} else {
 		e.target.classList.remove('correcto');
 		e.target.classList.add('error');
+		enviar.style.opacity = '1';
+		enviar.style.cursor = 'pointer';
+		enviar.disabled = false;
 
 		mostrarError('Todos los campos son obligatorios');
 	}
@@ -55,6 +58,7 @@ function getValidacion(e) {
 			e.target.classList.add('correcto');
 		}
 	}
+
 	if (
 		nombre.value !== '' &&
 		telefono.value !== '' &&
@@ -64,6 +68,7 @@ function getValidacion(e) {
 		enviar.style.cursor = 'pointer';
 		enviar.disabled = false;
 	}
+
 	console.log(e.target.value);
 }
 //Funcion enviar
